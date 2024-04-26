@@ -2,17 +2,22 @@ import React from 'react'
 
 import './App.css';
 import Home from './components/Home';
-// import Menu from './components/Menu';
-import Offer from './components/Offer';
+import Menu from './components/Menu';
+
 import Hi from './components/Hi';
 import Shop from './components/Shop';
+import Offer from './components/Offer'
 
 
-import Navbar from './components/Navbar';
 import LocomotiveScroll from 'locomotive-scroll';
 import { useState } from 'react';
 import { useEffect } from 'react';
-import Footer from './components/Footer';
+
+import {
+  BrowserRouter ,
+  Routes,
+  Route
+} from "react-router-dom";
 function App() { 
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
@@ -30,20 +35,30 @@ function App() {
   
   return (
     <>
+     <BrowserRouter>
       {isLoading ? (
         <Hi />
       ) : (
         <>
-          <Navbar />
-          <Home />
-          
-          {/* <Menu /> */}
+        
+        
+       
          
-          <Offer/>
-          <Shop/>
-          <Footer/>
+        <Routes>
+
+
+        <Route  path="/" Component={Home}/>
+        
+        <Route  path="/Menu" Component={Menu}/>
+        <Route  path="/Shop" Component={Shop}/>
+       
+          </Routes>
+          
+         
         </>
       )}
+       </BrowserRouter>
+       
     </>
   );
 }

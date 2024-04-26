@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Nunito&family=Nunito+Sans:ital,opsz,wght@0,6..12,600;0,6..12,700;1,6..12,600&family=Reddit+Mono:wght@200..900&family=Tilt+Neon&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
 <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Nunito&family=Nunito+Sans:ital,opsz,wght@0,6..12,600;0,6..12,700;1,6..12,600&family=Reddit+Mono:wght@200..900&display=swap" rel="stylesheet">
     <link href="./output.css" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
@@ -27,6 +27,19 @@
   </head>
   <body>
     <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+    <script type="module" src="/src/main.jsx">
+      var scrollTimeout;
+
+function stopScroll() {
+  clearTimeout(scrollTimeout);
+  document.querySelector('.image-container').style.overflowX = 'hidden';
+}
+
+function resumeScroll() {
+  scrollTimeout = setTimeout(function() {
+    document.querySelector('.image-container').style.overflowX = 'auto';
+  }, 1000); // Adjust the delay as needed
+}
+    </script>
   </body>
 </html>

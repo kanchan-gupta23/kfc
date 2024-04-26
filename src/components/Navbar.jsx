@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import {gsap} from  'gsap';
 import { Power2 } from 'gsap';
 
-
+import { Link } from 'react-router-dom';
 
 
 function Navbar() {
@@ -46,9 +46,10 @@ function Navbar() {
    <div className=' w-[85vw]  h-[10vh] absolute z-10 -translate-x-1/2  flex  left-1/2  items-center  justify-between '> 
    
       <div className='flex   w-1/2 gap-10  items-center ml-[10vw]'>
-      <img  className= ' navbar  ' src='https://online.kfc.co.in/static/media/kfcLogo.492728c6.svg' alt='logo'/>
-      <h3 className='navbar Lato text-zinc-100 font-bold w-full   '>Menu</h3>
-      <h3 className='navbar Lato text-zinc-100 font-bold w-full   '>Deals</h3>
+      <Link to="/"><img  className= ' navbar  ' src='https://online.kfc.co.in/static/media/kfcLogo.492728c6.svg' alt='logo'/></Link>
+      <Link to="/Menu"> <h3 className='navbar Lato text-zinc-100 font-bold w-full   '>
+      Menu</h3></Link>
+      <Link to="/Shop">  <h3 className='navbar Lato text-zinc-100 font-bold w-full'>  Deals</h3></Link>
       </div>
 
       <div className='flex   w-1/2  ml-[30vw] items-center'>
