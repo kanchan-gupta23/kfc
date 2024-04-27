@@ -179,8 +179,6 @@ gsap.to(".cont-img",{
     opacity:1,
     scale:1,
 
-
-   
     scrollTrigger:{
    
       trigger:".cont-img",
