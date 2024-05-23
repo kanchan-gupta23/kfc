@@ -21,7 +21,7 @@ function Menu() {
     gsap.from(menuItem,{
       opacity:0,
       y:50,
-     
+      duration:2,
       scrollTrigger:{
        
         scrub:0.3,
@@ -37,7 +37,7 @@ function Menu() {
       y:0,
     
       stagger:0.8,
-      
+      duration:2,
       scrollTrigger:{
         scrub:0.3,
         trigger:menuItem,
@@ -45,7 +45,7 @@ function Menu() {
         scroller:"body",
         
         start:"top bottom",
-        
+        end:"bottom 30%"
         
       
        
