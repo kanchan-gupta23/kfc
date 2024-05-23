@@ -8,9 +8,13 @@ import Navbar from './Navbar';
 import { Link } from 'react-router-dom';
 import { FaInstagramSquare } from "react-icons/fa";
 import { FaFacebookSquare } from "react-icons/fa";
+import CountUp from 'react-countup';
+
 
 function Home() {
   const[isHovered,setHovered]=useState({});
+  const[counter,setCounter]=useState(false)
+  
  
 const handleMouseEnter = (index) => {
   console.log('Mouse enter:', index);
@@ -49,33 +53,7 @@ const handleMouseLeave = (index) => {
     gsap.registerPlugin(ScrollTrigger);
     
 
-   gsap.from(".menu-item",{    
-    scrollTrigger:{
-      ease:Power2.easeInOut,
-    scrub:true, 
-    stagger:1,
-    trigger:".menu-item",
-    scroller:"body",
-   
-    }
-   })
-    
-
-   gsap.to(".menu-item",{
-   
-   
-    ease:Power2.easeInOut,
-    scrollTrigger:{
-      ease:Power2.easeInOut,
-    scrub:true, 
-    stagger:1,
-    trigger:".menu-item",
-    scroller:"body",
-    
-    
-    }
-    
-   })
+  
    
 
    gsap.from(".texxt",{
@@ -109,7 +87,7 @@ const handleMouseLeave = (index) => {
       ease:Power2.easeInOut,
 
       scroller:"body",
-      start:"top bottom",
+      start:"top 50%",
       
      
     }
@@ -153,8 +131,8 @@ const handleMouseLeave = (index) => {
 
   
  gsap.from(".cont-img",{
-    opacity:0,
-    scale:0,
+    opacity:0.5,
+    scale:0.5,
    
   
 
@@ -193,10 +171,38 @@ gsap.to(".cont-img",{
 
     }
   })
- 
+  gsap.to(".counter",{
+  scrollTrigger:{
+ trigger:".counter-cont",
+ start:"top bottom",
+ onEnter: () => setCounter(true),
+ onLeaveBack: () => setCounter(false),
+  }
+  })
+  gsap.from(".fanclub",{
+    rotate:0,
+    scale:0,
+    opacity:0,
+    })
    
 
-
+gsap.to(".fanclub",{
+  rotate:360,
+  scale:1,
+  opacity:1,
+  scrollTrigger:{
+    trigger:".counter-cont",
+    ease:Power2.easeInOut,
+    start:"top bottom",
+    end:"bottom top",
+    scroller:"body",
+    duration:2,
+    stagger:0.5,
+    toggleActions: 'play none none reverse',
+    
+  },
+  
+})
 
 
 
@@ -207,26 +213,31 @@ gsap.to(".cont-img",{
     <>
     <Navbar/>
     <div  data-scroll data-scroll-section data-scroll-speed="-.7" className='w-[100vw] h-[100vh] relative '>
-      <video autoPlay muted loop className=' w-[100vw] max-h-[100vh]  object-cover   '>
+      <video autoPlay muted loop className=' w-full max-h-[100vh]  object-cover   '>
         <source  type="video/mp4" src='./KFC-1.mp4'  />
        </video>
     </div>
-    <div  className='w-screen  h-[550vh] bg-white pt-[4vh]  relative  '  >
+
+
+    <div  className='w-screen  h-[550vh] bg-[url("https://i.pinimg.com/564x/94/10/1c/94101c5113eed3ef38f68341b2decec1.jpg")] bg-contain pt-[4vh]  relative browse-cate '  >
+     
     <img className='ml-5 -mt-6' src="https://online.kfc.co.in/static/media/Stripes_Small_OffersIcon.87fc6256.svg" alt="image" />
 
 
-    <div className='uppercase overflow-hidden mt-1 w-full flex texxtcont  h-[19vh] text-black text-[2.5rem]  '>{"Browse Categories".split("").map((item,index)=>{
-       return <span className='texxt text-[2.5rem] ' key={index}>{item}</span>;
+   <Link to="/Menu"> <div className='uppercase overflow-hidden mt-1 z-[99999] w-full flex texxtcont  reddit-mono h-[19vh] text-black font-bold text-[2.5rem] sticky top-[5%] '>{"Browse -Categories".split("").map((item,index)=>{
+       return <span className='texxt text-[6.5vh] ' key={index}>{item}</span>;
      
-     })}</div>
+     })}</div></Link>
      
       
       <div className=' block absolute left-1/2 -translate-x-1/2  mt-[25%] '  >
+      
+      
       {[
          
      {
-      image:"https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/categories/CAT170.jpg?ver=41.47",
-     h2:"chicken rolls"
+      image:"https://images.ctfassets.net/wtodlh47qxpt/5VQAImh8fghx8cYtmjRBxu/050c6b65545546ecca314321a5dddc15/CAT89?fit=fill&fm=webp",
+     h2:"snacks"
 
     },
     {
@@ -257,39 +268,41 @@ gsap.to(".cont-img",{
    
     return  <div  key={index}  data-scroll data-scroll-section data-scroll-speed="-.7" 
     
-   className='w-[40vw] h-[53vh] menu-item overflow-hidden menu mt-[15%]  
-    drop-shadow	filter: drop-shadow(2px 2px 2px 2px black) drop-shadow( 5px 5px 5px 5px  black); Z-3
-    
+   className='w-[35vw] h-[53vh] menu-item overflow-hidden menu mt-[15%]  
+    shadow-xl shadow-red-800 Z-7 rounded-[15px]
+     
        '>
        <img  
     
-        className='w-[40vw] h-[53vh]  relative rounded-[15px]  object-cover  menu-item-image z-8' src={items.image}/>
+        className='w-full h-full  relative rounded-[15px]  object-cover  menu-item-image z-8' src={items.image}/>
         <h2  className='pra absolute z-9
           text-zinc-800 text-[4.5vh] top-[50%] left-1/2 -translate-x-1/2 -translate-y-1/2 whitespace-nowrap uppercase 
         opacity-0
         text-shadow-xl   font-bold '>{items.h2} </h2>
     </div>
 })}
+</div>
   </div>
-  </div>
+ 
+ 
 
 
-  <div className='w-full bg-black '>
+  <div className='w-full bg-[url("https://i.pinimg.com/564x/87/93/42/879342fde6d6f9ebd3c65f7c9aa5cb79.jpg")] bg-contain '>
       
    
-    <div  className='w-screen h-[400vh] flex  relative  offercont '  >
+    <div  className='w-screen h-[370vh] flex  relative  offercont   '  >
    
-      <div className='w-1/2 h-[400vh]  ' >
-        <h1  className='sticky top-[40%] left-1/2 ml-[5vw] text-red-700 text-cont  '> Offers And Deals</h1> 
+      <div className='w-1/2 h-[380vh]  ' >
+       <Link to="/Shop" ><h1  className='sticky top-[40%] left-1/2 ml-[5vw] text-white reddit-mono text-cont   '> Offers And Deals</h1> </Link>
       </div>
 
       <div className='w-1/2 h-screen  block  mt-3 right  contt relative'>
-        <div className='  absolute top-[35%] left-[45%] -translate-x-1/2 img-cont'>
+        <div className='  absolute top-[35%] left-[45%] -translate-x-1/2 img-cont '>
         
-       <img  className=' cont-img w-[75vw] h-[55vh] pt-[30%] rounded-xl' src='https://assets.indiadesire.com/images/kfcbogo11072015.jpg'/>
-       <img   className=' cont-img mt-[8vh] w-[75vw] h-[55vh] rounded-xl' src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7e7FXEYzDx5LG7GlSZ00XfaStgeUKjL1utU13kR-c2g&s'/>
-       <img    className=' cont-img mt-[8vh] w-[75vw] h-[55vh] rounded-xl' src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvKzC3vd4fhU1VoB9wf2F0JaAZNES3r1yh-Ij6cjnspw&s'/>
-       <img    className=' cont-img pt-[14vh] w-[75vw] h-[55vh] rounded-xl' src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFJaoS8gyorCvc-LzCRFh92Qp9FcTbq2Fm1RnI3NnIcFg68lh_4B_2sw-TAfn3mT7OdZg&usqp=CAU'/>
+       <img  className=' cont-img w-[75rem] h-[55vh] mt-[60%] rounded-xl' src='https://assets.indiadesire.com/images/kfcbogo11072015.jpg'/>
+       <img   className=' cont-img mt-[8vh]  w-[75rem] h-[55vh] rounded-xl' src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7e7FXEYzDx5LG7GlSZ00XfaStgeUKjL1utU13kR-c2g&s'/>
+       <img    className=' cont-img mt-[8vh]  w-[75rem] h-[55vh] rounded-xl' src='https://i.pinimg.com/564x/af/b9/b5/afb9b56ffdea36186a5696ece3af8df0.jpg'/>
+       <img    className=' cont-img pt-[14vh]  w-[75rem] h-[55vh] rounded-xl' src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFJaoS8gyorCvc-LzCRFh92Qp9FcTbq2Fm1RnI3NnIcFg68lh_4B_2sw-TAfn3mT7OdZg&usqp=CAU'/>
 
        </div>
       </div>
@@ -298,11 +311,11 @@ gsap.to(".cont-img",{
 
 
 
-    <div data-scroll data-scroll-section data-scroll-speed="-.6" className='w-screen h-screen bg-white  '>
+     <div data-scroll data-scroll-section data-scroll-speed="-.6" className='w-screen h-screen   counter-cont bg-[url("https://wallpapers.com/images/high/kfc-fast-food-meal-qvrdx8esu6f1m0w0.webp")] bg-cover'>
       <img className='ml-5' src="https://online.kfc.co.in/static/media/Stripes_Small_OffersIcon.87fc6256.svg" alt="image" />
-      <h1 className='text-zinc-800 w-screen text-center text-[7vh] Tilt font-bold pt-[3vh]'>KFC FANDOM</h1>
+      <h1 className='text-zinc-900 w-screen text-center text-[7vh] Tilt font-bold -mt-[3vh]'>KFC FANDOM</h1>
       <div className='flex'>
-  <div className='w-[60%] bg-white h-full grid grid-cols-3 gap-x-[10vw] px-[6%] py-12 gap-y-[4vh]'>
+  <div className='w-[60%]  fan1 h-full grid grid-cols-3 gap-x-[10vw] px-[6%] py-12 gap-y-[4vh]'>
     {[
       {
         image: 'https://i.pinimg.com/564x/a9/b2/fd/a9b2fdb12dcf8a29b82b1ba291bcefac.jpg',
@@ -335,30 +348,30 @@ gsap.to(".cont-img",{
         p: "I'm going to have saucy nuggets again on this Sunday. 😍😃😋",
       },
     ].map((item, index) => (
-      <div key={index} className='shadow-lg shadow-zinc-300 w-[14vw] h-[35vh] bg-white rounded-lg relative '>
-        <img key={index} onMouseEnter={() => handleMouseEnter(index)}
-  onMouseLeave={() => handleMouseLeave(index)}
-      style={{ transform: `rotate(${isHovered[index] ? '360deg' : '0deg'})` }} className='absolute w-[6vw] h-[6vw] rounded-full left-[30%] -translate-x-1/2 -top-[10%]' src={item.image} alt="User Avatar" />
+      <div key={index} className='shadow-lg shadow-red-800 w-[14vw] h-[35vh]  rounded-lg relative bg-zinc-200 fanclub'>
+        <img key={index} 
+ 
+       className='absolute w-[80px] h-[80px] rounded-full left-[50%] -translate-x-1/2 -top-[10%] fan-img' src={item.image} alt="User Avatar" />
         <h4 className='font-bold text-black absolute left-1/2 top-[30%] -translate-x-1/2 uppercase'>{item.h4}</h4>
-        <p className='absolute text-[2.5vh] top-[45%] text-center text-black'>{item.p}</p>
+        <p className='absolute text-[2.5vh] top-[45%] text-center social-para text-black'>{item.p}</p>
         <img className='absolute -bottom-[8%] w-[12vw]' src='https://static.vecteezy.com/system/resources/previews/009/664/666/non_2x/5-star-rating-review-star-transparent-free-png.png' alt="Rating Star" />
       </div>
     ))}
   </div>
-  <div  >
-    <div className='flex text-red-700 text-[8vh] justify-center gap-[8vw] mt-[12vh] '>
-      <div><FaInstagramSquare  className='ml-7'/>
-      <h4 className='text-[3vh] text-center Tilt font-black '>KFC Instagram</h4>
-      <h4 className='text-[3vh] text-center Tilt font-bold '>26.4K Followers</h4>
+  <div className='w-[40%]' >
+    <div className='flex text-red-700 text-[8vh] justify-center social gap-[8vw] mt-[12vh] '>
+      <div className='insta'><FaInstagramSquare   className='ml-7 fb'/>
+      <h4 className='text-[3vh] text-center Tilt font-black instagram '>KFC Instagram</h4>
+      {counter && <h4 className='text-[3vh] text-center Tilt font-black counter ig'><CountUp start={0} end={26.4} duration={4} delay={1}></CountUp><span>.4K Followers</span></h4> }
       </div>
-      <div><FaFacebookSquare  className='ml-6'/>
-      <h4 className='text-[3vh] text-center Tilt font-black '>KFC Facebook</h4>
+      <div className='insta'><FaFacebookSquare  className='ml-6 fb'/>
+      <h4 className='text-[3vh] text-center Tilt font-black instagram '>KFC Facebook</h4>
 
-      <h4 className='text-[3vh] text-center Tilt font-bold '>58.4K Likes</h4></div>
+      {counter && <h4 className='text-[3vh] text-center Tilt font-black ig ' > <CountUp start={0} end={58} duration={4} delay={1}></CountUp><span>.4K Likes</span></h4>}</div>
     </div>
     <div>
     <img 
-      className='w-[24vw] h-[47vh] mt-[10vh] ml-[6vw] rounded-2xl ' src="https://i.pinimg.com/564x/29/65/be/2965be9d4786c41829156f2270277231.jpg" alt="image" />
+      className='w-[24vw] h-[47vh] mt-[7vh] ml-[6vw] rounded-2xl  kfc-club' src="https://i.pinimg.com/564x/29/65/be/2965be9d4786c41829156f2270277231.jpg" alt="image" />
       
 </div>
   </div>
@@ -378,7 +391,7 @@ gsap.to(".cont-img",{
       </div>
       <div>
       <p className='absolute right-[19%] top-[70%] capitalize'>enter your city name </p>
-      <div className='absolute flex justify-between items-center right-[12%] top-[80%] capitalize border-white border-[1px] w-[20vw] h-[6vh] px-2 text-[2.5vh] ' >
+      <div className=' city absolute flex justify-between items-center right-[12%] top-[80%] capitalize border-white border-[1px] w-[20vw] h-[6vh] px-2 text-[2.5vh] ' >
         <p>type here</p>
         <p >new delhi</p> </div>
       </div>

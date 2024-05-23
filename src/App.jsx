@@ -51,6 +51,7 @@ function App() {
         
         <Route  path="/Menu" Component={Menu}/>
         <Route  path="/Shop" Component={Shop}/>
+        <Route path='/Offer' Component={Offer}/>
        
           </Routes>
           

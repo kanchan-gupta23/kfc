@@ -57,9 +57,9 @@ import { Power2 } from 'gsap';
       <div className='bg-black  h-[60vh] max-w-screen relative  overflow-hidden text-white'>
        
        
-          <div className='grid grid-cols-6 max-w-screen  z-[9]  gap-x-[3vw] px-[10rem] '>
-            <div className='pt-[60%]  '>
-            <img className='absolute h-[8vw] w-[8vw] para ' src='https://www.pngall.com/wp-content/uploads/13/KFC-Logo-PNG-Images-HD.png'/>
+          <div className='grid grid-cols-6 max-w-screen  z-[9]  gap-x-[3vw] px-[10rem] foot '>
+            <div className='pt-[20%]  '>
+            <img className='absolute h-[12w] w-[12vw] para ' src='https://wallpapers.com/images/high/minimalist-kfc-anime-girl-xh90exvgqcibjm8i.webp'/>
             {/* <img className='absolute h-[8vw] w-[8vw] para ' src='https://i.pinimg.com/474x/74/6e/09/746e091f917dee50405c2149bccae808.jpg'/> */}
       
             </div>
@@ -96,7 +96,7 @@ import { Power2 } from 'gsap';
             <img className='para' src="https://images.ctfassets.net/wtodlh47qxpt/em3mcMuAdXWlgucSJiTbS/d3ae7e51ed101d829e459355e255c47f/apple.svg" alt="" />
           </div>
         </div>
-        <div className='flex gap-[30vw]  w-[100vw] text-[2vh] absolute bottom-[8%] mx-[30%]'>
+        <div className='flex gap-[30vw]  w-[100vw] text-[2vh] absolute bottom-[8%] mx-[30%] foot2'>
          <div className='para'>Copyright © KFC Corporation 2024 All Rights Reserved</div> 
           <div className='flex gap-3 text-[3vh] para'><FaInstagram />
           <BsFacebook />

@@ -1,9 +1,9 @@
 import React, {useEffect, useState} from 'react'
 import { motion, } from 'framer-motion'
-
+import Navbar from './Navbar';
 import gsap from 'gsap'
 import { Power2 } from 'gsap';
-
+import Footer from './Footer';
 import {ScrollTrigger} from "gsap/ScrollTrigger";
 
 import {Link } from 'react-router-dom';
@@ -28,7 +28,7 @@ function Menu() {
         trigger:menuItem,
         ease:Power2.easeInOut,
         scroller:"body",
-        toggleActions: 'play none none reverse',
+        
         
       }
     })
@@ -44,12 +44,12 @@ function Menu() {
         ease:Power2.easeInOut,
         scroller:"body",
         
-        start:"top 95%",
-        end:"bottom -100",
+        start:"top bottom",
+        
         
       
-        markers:true,
-        toggleActions: 'play none none reverse',
+       
+     
       }
     })
     })
@@ -67,11 +67,12 @@ function Menu() {
 
 
   return (
-<div className='bg-white w-screen  '>
+<div className='bg-zinc-900 w-screen relative  '>
+<Navbar/>
 
-<div  className='  h-full w-screen flex  relative pb-[70vh] ' >
-  <div 
-   className='img h-full w-[20vw] mt-20 ml-40  menuList  sticky top-[5%] '>
+<div className=' w-screen flex  pb-[20vh]'>
+
+<div className='img2 h-screen w-[20vw] ml-[15vw] mt-20 sticky top-[1%] '>
       <img src="https://online.kfc.co.in/static/media/Stripes_Small_OffersIcon.87fc6256.svg" alt="" />
       <div className=''>
         {[{name:"KFC MENU",
@@ -99,22 +100,23 @@ src:".value"
 src:".value"
 }].map((items,index)=>
       (
-        <Link to={items.src}
-        key={index}  className={`block text-3sml tracking-tighter text-zinc-800 leading-10 hover:font-bold ${index===0 && "text-4xl font-bold mt-5 mb-5"}`}>{items.name}</Link>
+       <Link to={items.src}
+      key={index}  className={`  list block text-3sml tracking-tighter text-zinc-200 leading-10 hover:font-bold ${index===0 && "text-4xl font-bold  text-red-800 mt-5 mb-5"}`}>{items.name} </Link> 
       ))}
 
       </div>
   </div>
-  <div  className='menu w-[60vw] ' >
-    <div className='flex gap-2  border-zinc-900 border-2 w-[30vw] shadow-md rounded-2xl overflow-hidden mt-40'>
+
+  <div  className='menu w-[60vw] menu2' >
+    <div className=' bg-zinc-200 flex gap-2  border-zinc-900 border-2 w-[300px] shadow-md rounded-2xl overflow-hidden mt-40 search'>
       <img src="https://online.kfc.co.in/static/media/searchIcon.0e00b33c.svg" alt="" className='h-8 ml-1'/>
-      <input type="search" placeholder='search you cravings' className='capitalize w-full h-8 outline-none' />
+      <input type="search" placeholder='search you cravings' className='bg-zinc-700 capitalize w-full h-8 outline-none' />
     </div>
-    <div  className='linear border-zinc-900 border-b-2 mt-4'></div>
+    <div  className='linear border-zinc-900 border-b-2 mt-4 '></div>
     <motion.div  initial={{x:[0,0,0]}} animate={{ x: [100, 100, 0] }} transition={{ease:[0.34, 1.56, 0.64, 1],duration:1.5}}    className='img '>
-      <div className=' menu2  w-full bg-zinc-100 mt-10 rounded-md justify-center align-middle'>
-        <h1 className='uppercase tracking-tighter font-semibold text-3xl p-5 text-black'>Peri peri chicken</h1>
-        <div className='  grid grid-cols-3 pb-[8vh] gap-4 justify-center align-middle w-full mx-3'>
+      <div className=' menu2  w-full bg-[url("https://cdn.pixabay.com/photo/2014/06/16/23/39/black-370118_1280.png")] bg-contain mt-10 rounded-md justify-center align-middle'>
+        <h1 className='uppercase tracking-tighter font-semibold text-3xl p-5 text-zinc-200'>Peri peri chicken</h1>
+        <div className='snickers   grid grid-cols-3 pb-[8vh] gap-4 justify-center align-middle w-full mx-3'>
           {[
     {
         img:"https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/D-PR00002144.jpg?ver=41.83",
@@ -141,14 +143,14 @@ src:".value"
         p:"Save Rs. 120 on 5 Peri Peri Leg Pieces, paired with 2 delicious dips (20gm each)"
     }
 ].map((items,index)=>{
-  return <div key={index}  className='menu3 text shadow-xl  w-[18vw] h-[70vh] rounded-md overflow-hidden p-4 relative text-black'>
+  return <div key={index}  className='menu3 text shadow-xl  text-black w-[18vw] h-[80vh] rounded-md  overflow-hidden p-4 relative bg-zinc-200'>
             <img  src={items.img} alt="" className=''/>
             <h1 className='text-red-700 text-[3.5vh] font-bold'>{items.h2}</h1>
             <h2 className='font-semibold text-[2.5vh]'>{items.amt}</h2>
-            <p className='text-black text-[2.5vh]'>{items.p}</p>
-            <div className='flex mt-3 gap-2 bg-red-600 rounded-xl justify-center p-2 h-[7.5vh] w-[15vw] align-middle  absolute bottom-[5%] left-1/2 -translate-x-1/2'>
-      <button className='capitalize text-white  pt-[0.5vh]'>add to cart</button>
-      <img src="https://online.kfc.co.in/static/media/Icon_Add_to_Cart.58b87a9b.svg" className='' alt="cart" />
+            <p className=' text-[2.5vh]'>{items.p}</p>
+            <div className=' cart flex mt-3 gap-2 bg-red-600 rounded-xl justify-center px-2 h-[7.5vh] w-[15vw] align-middle  absolute bottom-[5%] left-1/2 -translate-x-1/2'>
+      <button className='capitalize  flex items-center Lato'><h5>add to cart</h5></button>
+      <img src="https://online.kfc.co.in/static/media/Icon_Add_to_Cart.58b87a9b.svg" className='py-2' alt="cart" />
       </div>
   </div>
           })}
@@ -157,9 +159,9 @@ src:".value"
       </div>
     </motion.div>
     
-    <div   className='menu2  bg-zinc-100 '>
-      <h1 className='mt-40 mb-4 p-4 font-bold text-4xl text-black '>VALUE SNACKERS</h1>
-    <div className='img  pb-[8vh]  grid grid-cols-3 mx-3 gap-4 text-black'>
+    <div   className='menu2  bg-[url("https://cdn.pixabay.com/photo/2014/06/16/23/39/black-370118_1280.png")] bg-contain '>
+      <h1 className='mt-40 mb-4 p-4 font-bold text-4xl text-zinc-200 '>VALUE SNACKERS</h1>
+    <div className=' pb-[8vh]  grid grid-cols-3 mx-3 gap-4 text-black snickers menu4'>
       {[{img:"https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/D-K617.jpg?ver=41.8",
         h2:"Single Chicken Roll",
         amt:"₹119.05",
@@ -181,23 +183,23 @@ src:".value"
         amt:"₹108.57",
         p:"Soft Chocolate cake with a gooey center- perfect chocolaty end to every meal "}
       ].map((items,index)=>{
-          return  <div key={index} className='value menu3 shadow-xl text-black w-[18vw] h-[80vh] rounded-md overflow-hidden mt-5 p-4 relative'>
+          return  <div key={index} className='value menu3  shadow-xl bg-zinc-200 w-[18vw] h-[80vh] rounded-md overflow-hidden mt-5 p-4 relative'>
               <img key={index} src={items.img} alt="" className=''/>
               <h1 className='text-red-700  font-bold text-[3.5vh]'>{items.h2}</h1>
             <h2 className='font-semibold text-[2.5vh]'>{items.amt}</h2>
             <p className='text-[2.5vh]'>{items.p}</p>
-              <div className='flex mt-3 gap-2 bg-red-600 rounded-xl justify-center p-2 h-[7.5vh] w-[15vw] align-middle absolute bottom-[5%] left-1/2 -translate-x-1/2'>
-          <button className='capitalize text-white pt-[0.5vh]'>add to cart</button>
-          <img src="https://online.kfc.co.in/static/media/Icon_Add_to_Cart.58b87a9b.svg" className='' alt="" />
+              <div className=' cart flex mt-3 gap-2 bg-red-600 rounded-xl justify-center px-2 h-[7.5vh] w-[15vw] align-middle absolute bottom-[5%] left-1/2 -translate-x-1/2'>
+              <button className='capitalize text-white flex items-center Lato'><h5>add to cart</h5></button>
+          <img src="https://online.kfc.co.in/static/media/Icon_Add_to_Cart.58b87a9b.svg" className='py-2' alt="" />
           </div>
       </div>
       })}
     </div>
     </div>
       
-        <div   className=' w-full mt-80 menu2 bg-zinc-100'>
-        <h1 className=' img uppercase p-4 text-3xl font-semibold text-black '>chicken rolls</h1>
-      <div  className=' img pb-[8vh] w-full  grid grid-cols-3 mx-3  gap-4'>
+        <div   className=' w-full mt-80 menu2 bg-[url("https://cdn.pixabay.com/photo/2014/06/16/23/39/black-370118_1280.png")]  bg-contain'>
+        <h1 className=' img uppercase p-4 text-3xl font-semibold text-zinc-200 '>chicken rolls</h1>
+      <div  className='  pb-[8vh] w-full  grid grid-cols-3 mx-3  gap-4 snickers'>
       {[{img:"https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/D-PR00002324.jpg?ver=41.8",
           h2:"Classic Chicken Roll & Pepsi Combo",
           amt:"₹176.19",
@@ -224,14 +226,14 @@ src:".value"
       p:"KFC's take on the street style roll with double chicken strips, onions & spicy sauces"},
     
 ].map((items,index)=>{
-  return  <div key={index} className='img  menu3 shadow-xl  relative w-[18vw] h-[70vh] rounded-md text-black overflow-hidden p-4'>
+  return  <div key={index} className='img bg-zinc-200 menu3 shadow-xl  relative w-[18vw] h-[70vh] rounded-md text-black overflow-hidden p-4'>
       <img key={index} src={items.img} alt="" className=''/>
        <h1 className='text-red-700 text-[3.5vh] font-bold'>{items.h2}</h1>
     <h2 className='font-semibold text-[2.5vh]'>{items.amt}</h2>
     <p className='text-[2.5vh]'>{items.p}</p>
-      <div className='flex mt-3 gap-2 bg-red-600 rounded-xl justify-center h-[7.5vh] w-[15vw] p-2 align-middle absolute bottom-[5%] left-1/2 -translate-x-1/2'>
-  <button className='capitalize text-white  pt-[0.5vh]'>add to cart</button>
-  <img src="https://online.kfc.co.in/static/media/Icon_Add_to_Cart.58b87a9b.svg" className='' alt="" />
+      <div className=' cart flex mt-3 gap-2 bg-red-600 rounded-xl justify-center h-[7.5vh] w-[15vw] px-2 align-middle absolute bottom-[5%] left-1/2 -translate-x-1/2'>
+      <button className='capitalize text-white flex items-center Lato'><h5>add to cart</h5></button>
+  <img src="https://online.kfc.co.in/static/media/Icon_Add_to_Cart.58b87a9b.svg" className='py-2' alt="" />
   </div>
 </div>
 })}
@@ -239,9 +241,9 @@ src:".value"
 </div>
           
          
-          <div   className='  w-full mt-20 menu2 bg-zinc-100'>
-        <h1 className='uppercase p-4 text-3xl font-semibold text-black'>biryani buckets</h1>
-      <div className='snickers pb-[8vh] w-full grid grid-cols-3 mx-3 gap-4'>
+          <div   className='  w-full mt-20 menu2 bg-[url("https://cdn.pixabay.com/photo/2014/06/16/23/39/black-370118_1280.png")]  bg-contain'>
+        <h1 className='uppercase p-4 text-3xl font-semibold text-zinc-200'>biryani buckets</h1>
+      <div className='snickers pb-[8vh] w-full grid grid-cols-3 mx-3 gap-4  '>
       {[{img:"https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/D-PR00002166.jpg?ver=41.83",
           h2:"Classic Biryani Combo",
           amt:"₹176.19",
@@ -275,23 +277,23 @@ src:".value"
       amt:"₹548.57",
       p:"Deal combo of 2 Double Chicken Rolls, Large Fries, 2 Dips & Pepsi 475ml"}
 ].map((items,index)=>{
-  return  <div key={index} className='img menu3 shadow-xl relative text-black w-[18vw] h-[75vh] rounded-md overflow-hidden p-4'>
+  return  <div key={index} className='img menu3 bg-zinc-200 shadow-xl relative text-black w-[18vw] h-[75vh] rounded-md overflow-hidden p-4'>
       <img key={index} src={items.img} alt="" className=''/>
       <h1 className='text-red-700 text-[3.5vh] font-bold'>{items.h2}</h1>
     <h2 className='font-semibold text-[2.5vh]'>{items.amt}</h2>
     <p className='text-[2.5vh]'>{items.p}</p>
-      <div className='flex mt-3 gap-2 bg-red-600 rounded-xl justify-center p-2 h-[7.5vh] w-[15vw] align-middle absolute bottom-[5%] left-1/2 -translate-x-1/2 '>
-  <button className='capitalize text-white  pt-[0.5vh]'>add to cart</button>
-  <img src="https://online.kfc.co.in/static/media/Icon_Add_to_Cart.58b87a9b.svg" className='' alt="" />
+      <div className=' cart flex mt-3 gap-2 bg-red-600 rounded-xl justify-center px-2 h-[7.5vh] w-[15vw] align-middle absolute bottom-[5%] left-1/2 -translate-x-1/2 '>
+      <button className='capitalize text-white flex items-center Lato'><h5>add to cart</h5></button>
+  <img src="https://online.kfc.co.in/static/media/Icon_Add_to_Cart.58b87a9b.svg" className='py-2' alt="" />
   </div>
 </div>
 })}
     </div>
     </div>
 
-    <div  className=' w-full mt-20 menu2 bg-zinc-100' >
-        <h1 className='uppercase p-4 text-3xl font-semibold text-black '>box meals</h1>
-      <div className='value snickers pb-[8vh] w-full grid grid-cols-3 mx-3 gap-4'>
+    <div  className=' w-full mt-20 menu2 bg-[url("https://cdn.pixabay.com/photo/2014/06/16/23/39/black-370118_1280.png")]  bg-contain' >
+        <h1 className='uppercase p-4 text-3xl font-semibold text-zinc-200 '>box meals</h1>
+      <div className='value snickers pb-[8vh] w-full grid grid-cols-3 mx-3 gap-4  '>
       {[{img:"https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/D-PR00002167.jpg?ver=41.85",
           h2:"All Chicken Box",
           amt:"₹176.19",
@@ -313,22 +315,22 @@ src:".value"
       amt:"₹119.05",
       p:"Biryani lovers unite : Get 1 Veg Biryani Bucket with gravy, 1 Veg Patty & 1 Pepsi 475ml"}
     ].map((items,index)=>{
-      return  <div key={index} className='img menu3 value-snickers text-black shadow-xl relative w-[18vw] h-[70vh] rounded-md overflow-hidden p-4'>
+      return  <div key={index} className='img menu3 bg-zinc-200 value-snickers text-black shadow-xl relative w-[18vw] h-[70vh] rounded-md overflow-hidden p-4'>
           <img key={index} src={items.img} alt="" className=''/>
           <h1 className='text-red-700 text-[3.5vh] font-bold'>{items.h2}</h1>
         <h2 className='font-semibold text-[2.5vh]'>{items.amt}</h2>
         <p className='text-[2.5vh]'>{items.p}</p>
-          <div className='flex mt-3 gap-2 bg-red-600 rounded-xl justify-center p-2 h-[7.5vh] w-[15vw] align-middle absolute bottom-[5%] left-1/2 -translate-x-1/2'>
-      <button className='capitalize text-white  pt-[0.5vh]'>add to cart</button>
-      <img src="https://online.kfc.co.in/static/media/Icon_Add_to_Cart.58b87a9b.svg" className='' alt="" />
+          <div className=' cart flex mt-3 gap-2 bg-red-600 rounded-xl justify-center px-2 h-[7.5vh] w-[15vw] align-middle absolute bottom-[5%] left-1/2 -translate-x-1/2'>
+          <button className='capitalize text-white flex items-center Lato'><h5>add to cart</h5></button>
+      <img src="https://online.kfc.co.in/static/media/Icon_Add_to_Cart.58b87a9b.svg" className='py-2' alt="" />
           </div>
       </div>
 })}
     </div>
     </div>
-    <div   className='bg-zinc-100 w-full mt-20 menu2'>
-    <h1 className='uppercase p-4 text-3xl font-semibold text-black '>burgers</h1>
-  <div className=' pb-[8vh] grid grid-cols-3 gap-7 mx-3'>
+    <div   className='bg-[url("https://cdn.pixabay.com/photo/2014/06/16/23/39/black-370118_1280.png")]  bg-contain w-full mt-20 menu2'>
+    <h1 className='uppercase p-4 text-3xl font-semibold text-zinc-200 '>burgers</h1>
+  <div className=' pb-[8vh] grid grid-cols-3 gap-3 mx-3 snickers menu4  ' >
   {[
     {img:"https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/D-PR00001022.jpg?ver=41.85",
       h2:"Mixed Zinger Doubles",
@@ -357,22 +359,22 @@ src:".value"
       p:"Share 2 Classic Chicken Zingers & a Medium Popcorn in this delightful combo for 2 "
      }
 ].map((items,index)=>{
-  return  <div  key={index}  className='value-snickers relative text-black shadow-xl menu3 w-[18vw] h-[70vh]  rounded-md overflow-hidden p-4'>
+  return  <div  key={index}  className='value-snickers relative text-black shadow-xl bg-zinc-200 menu3 w-[18vw] h-[70vh]  rounded-md overflow-hidden p-4 '>
       <img key={index} src={items.img}  alt="" className='img'/>
       <h1 className='text-red-700 text-[3.5vh] font-bold'>{items.h2}</h1>
     <h2 className='font-semibold text-[2.5vh]'>{items.amt}</h2>
     <p className='text-[2.5vh]'>{items.p}</p>
-      <div className='flex mt-3 gap-2 bg-red-600 rounded-xl justify-center h-[7.5vh] w-[15vw] p-2 align-middle absolute bottom-[5%] left-1/2 -translate-x-1/2'>
-  <button className='capitalize text-white  pt-[0.5vh]'>add to cart</button>
-  <img src="https://online.kfc.co.in/static/media/Icon_Add_to_Cart.58b87a9b.svg" className='' alt="" />
+      <div className=' cart flex mt-3 gap-2 bg-red-600 rounded-xl justify-center h-[7.5vh] w-[15vw] px-2 align-middle absolute bottom-[5%] left-1/2 -translate-x-1/2'>
+      <button className='capitalize text-white flex items-center Lato'><h5>add to cart</h5></button>
+  <img src="https://online.kfc.co.in/static/media/Icon_Add_to_Cart.58b87a9b.svg" className='py-2' alt="" />
   </div>
 </div>
 })}
     </div>
     </div>
-    <div   className=' w-full mt-20  bg-zinc-100 menu2'>
-        <h1 className='uppercase p-4 text-3xl font-semibold text-black '>snacks</h1>
-      <div className=' box value snickers pb-[8vh] w-full grid grid-cols-3 mx-3 gap-4'>
+    <div   className=' w-full mt-20 bg-[url("https://cdn.pixabay.com/photo/2014/06/16/23/39/black-370118_1280.png")]  bg-contain menu2'>
+        <h1 className='uppercase p-4 text-3xl font-semibold text-zinc-200 '>snacks</h1>
+      <div className=' box value snickers pb-[8vh] w-full grid grid-cols-3 mx-3 gap-4 '>
       {[
         {img:"https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/D-K701.jpg?ver=41.85",
         h2:"Chicken & Krispers Combo",
@@ -410,23 +412,23 @@ src:".value"
     p:"Share 2 Classic Chicken Zingers & a Medium Popcorn in this delightful combo for 2 "
    }
 ].map((items,index)=>{
-return  <div key={index} className='value-snickers text-black shadow-xl menu3 w-[18vw] h-[70vh] rounded-md relative overflow-hidden p-4'>
+return  <div key={index} className='value-snickers bg-zinc-200 text-black shadow-xl menu3 w-[18vw] h-[70vh] rounded-md relative overflow-hidden p-4'>
     <img key={index} src={items.img} alt=""  className='img'/>
     <h1 className='text-red-700 text-[3.5vh] font-bold'>{items.h2}</h1>
   <h2 className='font-semibold text-[2.5vh]'>{items.amt}</h2>
   <p className='text-[2.5vh]'>{items.p}</p>
-    <div className='flex mt-3 gap-2 bg-red-600 rounded-xl justify-center h-[7.5vh] w-[15vw] p-2 align-middle absolute bottom-[5%] left-1/2 -translate-x-1/2 '>
-<button className='capitalize text-white  pt-[0.5vh]'>add to cart</button>
-<img src="https://online.kfc.co.in/static/media/Icon_Add_to_Cart.58b87a9b.svg" className='' alt="" />
+    <div className=' cart flex mt-3 gap-2 bg-red-600 rounded-xl justify-center h-[7.5vh] w-[15vw] px-2 align-middle absolute bottom-[5%] left-1/2 -translate-x-1/2 '>
+    <button className='capitalize text-white flex items-center Lato'><h5>add to cart</h5></button>
+<img src="https://online.kfc.co.in/static/media/Icon_Add_to_Cart.58b87a9b.svg" className='py-2' alt="" />
 </div>
 </div>
 })}
   </div>
   </div>
 
-  <div   className='  w-full mt-20 menu2 bg-zinc-100'>
-    <h1 className='uppercase p-4 text-3xl font-semibold text-black'>beverages</h1>
-  <div className='w-full grid grid-cols-3 mx-3 gap-4 pb-[8vh]'>
+  <div   className='  w-full mt-20 menu2 bg-[url("https://cdn.pixabay.com/photo/2014/06/16/23/39/black-370118_1280.png")]  bg-contain'>
+    <h1 className='uppercase p-4 text-3xl font-semibold text-zinc-200'>beverages</h1>
+  <div className='w-full grid grid-cols-3 mx-3 gap-4 pb-[8vh]  snickers'>
   {[{img:"https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/D-K350.jpg?ver=41.85",
         h2:"Pepsi 475ml PET",
         amt:"₹176.19",
@@ -450,21 +452,23 @@ return  <div key={index} className='value-snickers text-black shadow-xl menu3 w-
     p:"Mirinda Can 300 ml"},
 
 ].map((items,index)=>{
-return  <div key={index} className='menu3 text-black shadow-xl w-[18vw] h-[60vh]  rounded-md relative p-4'>
+return  <div key={index} className='menu3 text-black shadow-xl w-[18vw] h-[60vh] bg-zinc-200  rounded-md relative p-4'>
     <img key={index} src={items.img} alt=""  className='img'/>
     <h1 className='text-red-700 text-[3.5vh] font-bold'>{items.h2}</h1>
   <h2 className='font-semibold text-[2.5vh]'>{items.amt}</h2>
   <p className='text-[2.5vh] text-black'>{items.p}</p>
-    <div className='flex mt-3 gap-2 bg-red-600 rounded-xl justify-center h-[7.5vh] w-[15vw] p-2 align-middle absolute bottom-[5%] left-1/2 -translate-x-1/2 '>
-<button className='capitalize text-white  pt-[0.5vh]'>add to cart</button>
-<img src="https://online.kfc.co.in/static/media/Icon_Add_to_Cart.58b87a9b.svg" className='' alt="" />
+    <div className=' cart flex mt-3 gap-2 bg-red-600 rounded-xl justify-center h-[7.5vh] w-[15vw] px-2 align-middle absolute bottom-[5%] left-1/2 -translate-x-1/2 '>
+    <button className='capitalize text-white flex items-center Lato'><h5>add to cart</h5></button>
+<img src="https://online.kfc.co.in/static/media/Icon_Add_to_Cart.58b87a9b.svg" className='py-2' alt="" />
 </div>
 </div>
 })}
   </div>
   </div>
      </div>
+     
      </div>
+     <Footer/>
      </div>
      
     
