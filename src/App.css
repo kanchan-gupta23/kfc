@@ -172,8 +172,8 @@ color: rgb(132, 8, 8);
     
   }
   .kfc-logo{
-    height:8rem;
-   width:8rem;
+    height:300px;
+   width:300px;
 
   }
   .pre-div{
@@ -243,9 +243,7 @@ color: rgb(132, 8, 8);
   .city{
    width:35vw;
   }
-  .nav1{
-    margin-left: 2vw;
-  }
+ 
   .nav2{
     margin-left: 10vw;
   }
