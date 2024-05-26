@@ -162,6 +162,9 @@ color: rgb(132, 8, 8);
 }
 
 @media(max-width:500px){
+  html, body {
+    overflow-x: hidden;
+  }
   .video{
     height:100vw;
     width:100vh;
