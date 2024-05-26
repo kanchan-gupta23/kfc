@@ -9,6 +9,9 @@ import Shop from './components/Shop';
 import Offer from './components/Offer'
 
 
+
+
+
 import LocomotiveScroll from 'locomotive-scroll';
 import { useState } from 'react';
 import { useEffect } from 'react';
