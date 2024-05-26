@@ -16,7 +16,7 @@ function Offer() {
        
         <h2 className='text-zinc-900'>Login</h2>
          <form id="loginForm">
-            <input className='bg-[rgb(221,232,243)]'  type="text" id="loginEmail" placeholder="Email" required/>
+            <input className='bg-[rgb(221,232,243)] '  type="text" id="loginEmail" placeholder="Email" required/>
              <input className='bg-[rgb(221,232,243)]' type="password" id="loginPassword" placeholder="Password" required/>
             <button className='bg-[rgb(221,232,243)] text-zinc-700' type="submit">Login
             <img className='  hidden top-1/2 left-1/2  absolute h-[100px] w-[100px] z-10 ' src={gifImage} alt="Star GIF"/></button>
