@@ -172,11 +172,15 @@ color: rgb(132, 8, 8);
     
   }
   .kfc-logo{
-    height:4rem;
-   width:4rem;
+    height:8rem;
+   width:8rem;
 
   }
   .pre-div{
+    width:50vw;
+    height:50vw;
+  }
+  .pre-img{
     width:50vw;
     height:50vw;
   }
