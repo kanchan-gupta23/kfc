@@ -6,43 +6,10 @@ import { Power2 } from 'gsap';
 
 
 function Hi() {
-//     const Preloader = ({ dark }) => {
-
-//     const logoRef = useRef(null);
-//     const textRef = useRef(null);
-
-//   useEffect(() => {
-//     if (!dark) {
-//       const tl = gsap.timeline({ repeat: -1, yoyo: true });
-//       tl.to(logoRef.current, { boxShadow: '0 0 20px rgba(0, 0, 0, 0.3)', duration: 1, ease: 'power1.inOut' });
-//     }
-//   }, [dark]);
-//   return (
-//     <div className=' preloader z-9999 flex-col items-center justify-center bg-zinc-700'>
-//         <img src='https://i.pinimg.com/564x/25/08/22/2508224b00dd503aeef6bd2639535a44.jpg' className='pre-img'  ref={logoRef} />
-//         <div className="loading-text" ref={textRef}>
-//         <span>.</span>
-//         <span>.</span>
-//         <span>.</span>
-//       </div>
-        
-      
-//     </div>
-//   )
-// }}
-
-// export default Hi
-
-
-
-
-
-
-
 
 useEffect(()=>{
  
-  // Slide up animation for the preloader
+ 
 
 gsap.from(".effect",{
     x:"60%",
