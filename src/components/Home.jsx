@@ -293,7 +293,7 @@ gsap.to(".fanclub",{
     <div  className='w-screen h-[370vh] flex  relative  offercont   '  >
    
       <div className='w-1/2 h-[380vh]  ' >
-       <Link to="/Shop" ><h1  className='sticky top-[40%] left-1/2 ml-[5vw] text-white reddit-mono text-cont text-[2rem]  '> Offers And Deals</h1> </Link>
+       <Link to="/Shop" ><h1  className='sticky top-[40%] left-1/2 ml-[5vw] text-white reddit-mono text-cont -[4rem]  '> Offers And Deals</h1> </Link>
       </div>
 
       <div className='w-1/2 h-screen  block  mt-3 right  contt relative'>
