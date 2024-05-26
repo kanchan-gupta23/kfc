@@ -43,7 +43,7 @@ function Navbar() {
     
     < >
 
-   <div className=' w-[85vw]  h-[10vh] absolute z-10 -translate-x-1/2  flex  left-1/2  items-center  justify-between '> 
+   <div className=' w-[85vw]  h-[10vh] absolute z-10 -translate-x-1/2  flex  left-1/2  items-center  justify-between overflow-hidden '> 
    
       <div className='flex   w-1/2 gap-10  items-center ml-[10vw]'>
       <Link to="/"><img  className= ' navbar  kfc-logo w-full' src='https://online.kfc.co.in/static/media/kfcLogo.492728c6.svg' alt='logo'/></Link>

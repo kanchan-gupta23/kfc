@@ -212,7 +212,7 @@ gsap.to(".fanclub",{
   return (
     <>
     <Navbar/>
-    <div  data-scroll data-scroll-section data-scroll-speed="-.7" className='w-[100vw] h-[100vh] relative '>
+    <div  data-scroll data-scroll-section data-scroll-speed="-.7" className='w-[100vw] h-[100vh] relative overflow-hidden '>
       <video autoPlay muted loop className=' w-full max-h-[100vh]  object-cover   '>
         <source  type="video/mp4" src='./KFC-1.mp4'  />
        </video>
@@ -230,7 +230,7 @@ gsap.to(".fanclub",{
      })}</div></Link>
      
       
-      <div className=' block absolute left-1/2 -translate-x-1/2  mt-[25%] '  >
+      <div className=' block absolute left-1/2 -translate-x-1/2  mt-[25%] overflow-hidden '  >
       
       
       {[
@@ -287,13 +287,13 @@ gsap.to(".fanclub",{
  
 
 
-  <div className='w-full bg-[url("https://i.pinimg.com/564x/87/93/42/879342fde6d6f9ebd3c65f7c9aa5cb79.jpg")] bg-contain '>
+  <div className='w-screen bg-[url("https://i.pinimg.com/564x/87/93/42/879342fde6d6f9ebd3c65f7c9aa5cb79.jpg")] bg-contain '>
       
    
     <div  className='w-screen h-[370vh] flex  relative  offercont   '  >
    
       <div className='w-1/2 h-[380vh]  ' >
-       <Link to="/Shop" ><h1  className='sticky top-[40%] left-1/2 ml-[5vw] text-white reddit-mono text-cont -[4rem]  '> Offers And Deals</h1> </Link>
+       <Link to="/Shop" ><h1  className='sticky top-[40%] left-1/2 ml-[5vw] text-white reddit-mono   '> Offers And Deals</h1> </Link>
       </div>
 
       <div className='w-1/2 h-screen  block  mt-3 right  contt relative'>

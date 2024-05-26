@@ -164,7 +164,7 @@ button:hover img{
 color: rgb(132, 8, 8);
 }
 
-@media(max-width:600px){
+@media(max-width:700px){
   video{
     height:100vh;
   }
