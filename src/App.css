@@ -161,7 +161,7 @@ button:hover img{
 color: rgb(132, 8, 8);
 }
 
-@media(max-width:700px){
+@media(max-width:450px){
   html, body {
     overflow-x: hidden;
   }
@@ -245,9 +245,8 @@ color: rgb(132, 8, 8);
   }
   .navi{
     left:1px;
-    width:full;
-    justify-content: space-around;
-    gap:2px;
+    width:100vw;
+    justify-content: space-between;
   }
  .nav1{
   margin-left: 2px;
