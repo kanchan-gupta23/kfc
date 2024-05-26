@@ -26,9 +26,10 @@ font-family: "Pacifico", cursive;}
 text-shadow:0 0 3px  whitesmoke;
 
 }
-html, body {
+html{
   overflow-x: hidden;
 }
+
 .div{
   position: relative;
  

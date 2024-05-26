@@ -104,7 +104,8 @@ const handleMouseLeave = (index) => {
       ease:Power2.easeInOut,
      
       scroller:"body",
-      duration:1
+      duration:1,
+      
     },
    
     
@@ -122,6 +123,7 @@ const handleMouseLeave = (index) => {
         ease:Power2.easeInOut,
        
         scroller:"body",
+       
        
     },
     
