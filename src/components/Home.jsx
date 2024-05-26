@@ -224,13 +224,13 @@ gsap.to(".fanclub",{
     <img className='ml-5 -mt-6' src="https://online.kfc.co.in/static/media/Stripes_Small_OffersIcon.87fc6256.svg" alt="image" />
 
 
-   <Link to="/Menu"> <div className='uppercase overflow-hidden mt-1 z-[99999] w-full flex texxtcont  reddit-mono h-[19vh] text-black font-bold text-[2.5rem] sticky top-[5%] '>{"Browse -Categories".split("").map((item,index)=>{
+   <Link to="/Menu"> <div className='uppercase mt-1 z-[99999] w-full flex texxtcont  reddit-mono h-[19vh] text-black font-bold text-[2.5rem] sticky top-[5%] '>{"Browse -Categories".split("").map((item,index)=>{
        return <span className='texxt text-[6.5vh] ' key={index}>{item}</span>;
      
      })}</div></Link>
      
       
-      <div className=' block absolute left-1/2 -translate-x-1/2  mt-[25%] overflow-hidden '  >
+      <div className=' block absolute left-1/2 -translate-x-1/2  mt-[25%]  '  >
       
       
       {[

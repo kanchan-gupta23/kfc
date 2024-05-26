@@ -161,13 +161,14 @@ button:hover img{
 color: rgb(132, 8, 8);
 }
 
-@media(max-width:500px){
+@media(max-width:700px){
   html, body {
     overflow-x: hidden;
   }
   .video{
     height:100vw;
     width:100vh;
+    object-fit: cover;
   }
   .kfc-logo{
     height:3rem;
