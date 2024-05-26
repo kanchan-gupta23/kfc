@@ -166,7 +166,7 @@ color: rgb(132, 8, 8);
     overflow-x: hidden;
   }
   .video{
-    height:100vw;
+    height:100vh;
     width:100vh;
     object-fit: cover;
     
@@ -177,8 +177,8 @@ color: rgb(132, 8, 8);
 
   }
   .pre-img{
-    width:20vw;
-    height:20vw;
+    width:10rem;
+    height:10rem;
   }
   .menu-item{
     width:25rem;
@@ -235,6 +235,12 @@ color: rgb(132, 8, 8);
   }
   .city{
    width:35vw;
+  }
+  .nav1{
+    margin-left: 5vw;
+  }
+  .nav2{
+    margin-left: 15vw;
   }
   .foot{
     gap:4vw;
