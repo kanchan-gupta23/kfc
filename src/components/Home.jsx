@@ -213,7 +213,7 @@ gsap.to(".fanclub",{
     <>
     <Navbar/>
     <div  data-scroll data-scroll-section data-scroll-speed="-.7" className='w-[100vw] h-[100vh] relative overflow-hidden '>
-      <video autoPlay muted loop className=' w-full max-h-[100vh]  object-cover   '>
+      <video autoPlay muted loop className=' w-full max-h-[100vh]  object-cover video   '>
         <source  type="video/mp4" src='./KFC-1.mp4'  />
        </video>
     </div>
