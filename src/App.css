@@ -167,7 +167,7 @@ color: rgb(132, 8, 8);
   }
   .video{
     height:100vh;
-    width:100vw;
+    width:100vh;
     object-fit: cover;
     
   }
@@ -244,15 +244,158 @@ color: rgb(132, 8, 8);
    width:35vw;
   }
   .navi{
-    left:1px;
+    left:3px;
+    transform: translateX(0);
     width:100vw;
-    justify-content: space-between;
+  }
+ .nav1{
+  margin-left: 4px;
+  gap:7px;
+ }
+  .nav2{
+    margin-left: 35px;
+    gap:7px;
+  }
+  .foot{
+    gap:20px;
+    padding:0 ;
+    font-size: 2vh;
+  }
+  .foot2{
+    gap:10vw; 
+    margin:0 5vw;
+  }
+  .offercont{
+    height:298vh;
+
+  }
+  .text-cont{
+    margin-left: 4vw;
+  }
+  .img2{
+    margin-left: 3vw;
+  }
+  .menu3{
+    width:34vw;
+    height:74vh;
+    
+  }
+  .menu2{
+    width:73vw;
+  }
+  .cart{
+    width:200px;
+    height:7.5vh;
+  }
+  .snickers{
+    display: flex;
+    flex-wrap: wrap;
+    gap:3;
+  }
+  .menu4{
+    margin-left: 0;
+  }
+  .image-container{
+   width:230px;
+  }
+  .overlay-content{
+    left:8%;
+  }
+ 
+}
+@media(max-width:700px){
+  html, body {
+    overflow-x: hidden;
+  }
+  .video{
+    height:100vh;
+    width:100vh;
+    object-fit: cover;
+    
+  }
+  .kfc-logo{
+    height:300px;
+   width:300px;
+
+  }
+  .pre-div{
+    width:50vw;
+    height:50vw;
+  }
+  .pre-img{
+    width:50vw;
+    height:50vw;
+  }
+  .menu-item{
+    width:25rem;
+    
+  }
+  .hipara{
+    color:white;
+  }
+  .browse-cate{
+    padding-top:15vh;
+  }
+  .cont-img{
+    width:70vw;
+    height:40vh;
+  }
+  .fan-img{
+    width:70px;
+    height:70px;
+  }
+  .fanclub{
+    width:20vw;
+    margin-top: 3vh;
+   
+  }
+  .social{
+    gap:2vw;
+  }
+  .fan1{
+    padding: 3vw 2vw;
+    width:60%;
+    
+    display: flex;
+    flex-wrap: wrap;
+
+  }
+  .social-para{
+    line-height: 1.28rem;
+  }
+  .insta{
+        text-align: center;
+  }
+  .instagram
+  {
+    width:50%;
+    text-align: center;
+  }
+  .fb{
+    margin-left: 0;
+  }
+  .ig{
+    margin-left: -3.5vw;
+  }
+  .kfc-club{
+    width:35vw;
+    margin-left:0;
+    height:40vh;
+  }
+  .city{
+   width:35vw;
+  }
+  .navi{
+    left:0;
+    transform: translateX(0);
+    width:100vw;
+    gap:2px;
   }
  .nav1{
   margin-left: 2px;
  }
   .nav2{
-    margin-left: 50px;
+    margin-left: 20px;
   }
   .foot{
     gap:4vw;
