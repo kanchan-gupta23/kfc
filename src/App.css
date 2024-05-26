@@ -169,16 +169,16 @@ color: rgb(132, 8, 8);
     height:100vw;
     width:100vh;
     object-fit: cover;
-    transform: rotate(90deg);
+    
   }
   .kfc-logo{
-    height:3rem;
-   width:3rem;
+    height:4rem;
+   width:4rem;
 
   }
   .pre-img{
-    width:50vw;
-    height:50vw;
+    width:20vw;
+    height:20vw;
   }
   .menu-item{
     width:25rem;
