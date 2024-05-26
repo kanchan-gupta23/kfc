@@ -244,15 +244,16 @@ color: rgb(132, 8, 8);
    width:35vw;
   }
   .navi{
-    left:1;
+    left:1px;
     width:full;
     justify-content: space-around;
+    gap:2px;
   }
  .nav1{
-  margin-left: 2vw;
+  margin-left: 2px;
  }
   .nav2{
-    margin-left: 50vw;
+    margin-left: 50px;
   }
   .foot{
     gap:4vw;
