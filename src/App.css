@@ -177,12 +177,15 @@ color: rgb(132, 8, 8);
 
   }
   .pre-img{
-    width:10rem;
-    height:10rem;
+    width:50vw;
+    height:50vw;
   }
   .menu-item{
     width:25rem;
     
+  }
+  .hipara{
+    color:white;
   }
   .browse-cate{
     padding-top:15vh;
@@ -237,10 +240,10 @@ color: rgb(132, 8, 8);
    width:35vw;
   }
   .nav1{
-    margin-left: 5vw;
+    margin-left: 2vw;
   }
   .nav2{
-    margin-left: 15vw;
+    margin-left: 10vw;
   }
   .foot{
     gap:4vw;

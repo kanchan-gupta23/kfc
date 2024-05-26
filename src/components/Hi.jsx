@@ -74,10 +74,10 @@ gsap.from(".effect",{
         ' style={{transform:`rotate(45deg)`, }}></div>
          <img src='https://pngimg.com/d/kfc_PNG20.png' className='pre-img w-[9vw] h-[9vw]'  />         </div> 
       <div className="loading-text flex ">
-        <p>Loading</p>
-        <span >.</span>
-        <span >.</span> 
-        <span >.</span>
+        <p className='hipara'>Loading</p>
+        <span  className='hipara'>.</span>
+        <span className='hipara' >.</span> 
+        <span  className='hipara'>.</span>
       </div>
     </div>
   
