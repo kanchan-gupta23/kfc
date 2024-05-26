@@ -172,8 +172,8 @@ color: rgb(132, 8, 8);
     
   }
   .kfc-logo{
-    height:300px;
-   width:300px;
+    height:100px;
+   width:100px;
 
   }
   .pre-div{
@@ -186,25 +186,27 @@ color: rgb(132, 8, 8);
   }
   .menu-item{
     width:70vw;
+    margin: 0 4px;
     
   }
   .hipara{
     color:white;
   }
   .browse-cate{
-    padding-top:15vh;
+    padding-top:95vh;
   }
   .cont-img{
-    width:70vw;
-    height:40vh;
+    width:60vw;
+    height:30vh;
   }
   .fan-img{
-    width:70px;
-    height:70px;
+    width:10px;
+    height:10px;
   }
   .fanclub{
-    width:20vw;
-    margin-top: 3vh;
+    width:60vw;
+    margin-top: 15vh;
+    height:30vh;
    
   }
   .social{
@@ -257,7 +259,7 @@ color: rgb(132, 8, 8);
     gap:7px;
   }
   .foot{
-    gap:20px;
+    gap:70px;
     padding:0 ;
     font-size: 2vh;
   }

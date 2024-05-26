@@ -219,12 +219,12 @@ gsap.to(".fanclub",{
     </div> 
 
 
-    <div  className='w-screen  h-[550vh] bg-[url("https://i.pinimg.com/564x/94/10/1c/94101c5113eed3ef38f68341b2decec1.jpg")] bg-contain pt-[4vh]  relative browse-cate '  >
+    <div  className='w-screen  h-[550vh] bg-[url("https://i.pinimg.com/564x/94/10/1c/94101c5113eed3ef38f68341b2decec1.jpg")] bg-contain pt-[4vh]  relative browse-cate  '  >
      
     <img className='ml-5 -mt-6' src="https://online.kfc.co.in/static/media/Stripes_Small_OffersIcon.87fc6256.svg" alt="image" />
 
 
-   <Link to="/Menu"> <div className='uppercase mt-1 z-[99999] w-full flex texxtcont  reddit-mono h-[19vh] text-black font-bold text-[2.5rem] sticky top-[5%] '>{"Browse -Categories".split("").map((item,index)=>{
+   <Link to="/Menu"> <div className='uppercase mt-1 z-[99999] w-full flex texxtcont overflow-hidden  reddit-mono h-[19vh] text-black font-bold text-[2.5rem] sticky top-[5%] '>{"Browse -Categories".split("").map((item,index)=>{
        return <span className='texxt text-[6.5vh] ' key={index}>{item}</span>;
      
      })}</div></Link>
