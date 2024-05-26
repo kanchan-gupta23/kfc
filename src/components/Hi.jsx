@@ -69,10 +69,10 @@ gsap.from(".effect",{
     <div className='preloader z-9999 flex flex-col items-center justify-center bg-black w-screen h-screen'>
       
       
-     <div className=' w-[9vw] h-[9vw] rounded-full overflow-hidden   relative'>  
+     <div className=' w-[9vw] h-[9vw] rounded-full overflow-hidden pre-div  relative'>  
      <div className='bg-zinc-800 w-[20vw] h-[20vw] opacity-[0.5] effect z-9 absolute -left-[110%] -top-[49%]
         ' style={{transform:`rotate(45deg)`, }}></div>
-         <img src='https://pngimg.com/d/kfc_PNG20.png' className='pre-img w-[9vw] h-[9vw]'  />         </div> 
+         <img src='https://pngimg.com/d/kfc_PNG20.png' className='pre-img w-full h-full'  />         </div> 
       <div className="loading-text flex ">
         <p className='hipara'>Loading</p>
         <span  className='hipara'>.</span>
