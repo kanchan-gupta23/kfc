@@ -189,7 +189,7 @@ src:".value"
             <h2 className='font-semibold text-[2.5vh]'>{items.amt}</h2>
             <p className='text-[2.5vh]'>{items.p}</p>
               <div className=' cart flex mt-3 gap-2 bg-red-600 rounded-xl justify-center px-2 h-[7.5vh] w-[15vw] align-middle absolute bottom-[5%] left-1/2 -translate-x-1/2'>
-              <button className='capitalize text-white flex items-center Lato bg-black '><h5 >add to cart</h5></button>
+              <button className='capitalize text-white flex items-center justify-center Lato bg-black '><h5 >add to cart</h5></button>
           <img src="https://online.kfc.co.in/static/media/Icon_Add_to_Cart.58b87a9b.svg" className='py-2' alt="" />
           </div>
       </div>
