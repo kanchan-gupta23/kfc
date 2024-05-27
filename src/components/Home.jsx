@@ -9,30 +9,18 @@ import { Link } from 'react-router-dom';
 import { FaInstagramSquare } from "react-icons/fa";
 import { FaFacebookSquare } from "react-icons/fa";
 import CountUp from 'react-countup';
-
-
+import LocomotiveScroll from 'locomotive-scroll';
 function Home() {
-  const[isHovered,setHovered]=useState({});
+  
   const[counter,setCounter]=useState(false)
   
  
-const handleMouseEnter = (index) => {
-  console.log('Mouse enter:', index);
-  setHovered((prevState) => ({
-    ...prevState,
-    [index]: true,
-  }));
-};
 
-const handleMouseLeave = (index) => {
-  console.log('Mouse leave:', index);
-  setHovered((prevState) => ({
-    ...prevState,
-    [index]: false,
-  }));
-};
+  
   
   useEffect(()=>{
+    const locomotiveScroll = new LocomotiveScroll();
+    gsap.registerPlugin(ScrollTrigger);
     const menu = document.querySelectorAll('.menu')
     menu.forEach((items)=>{
       items.addEventListener('mouseenter', () => {
@@ -47,10 +35,6 @@ const handleMouseLeave = (index) => {
       });
    
   }, []);
-  
-  },[])
-  useEffect(()=>{
-    gsap.registerPlugin(ScrollTrigger);
     
 
   
@@ -71,7 +55,7 @@ const handleMouseLeave = (index) => {
       scroller:"body",
       start:"top bottom",
       
-     
+      toggleActions: 'play none none reverse',
     }
     
    })
@@ -89,7 +73,7 @@ const handleMouseLeave = (index) => {
       scroller:"body",
       start:"top 50%",
       
-     
+   
     }
   
 
@@ -209,12 +193,13 @@ gsap.to(".fanclub",{
 
 
 
+
    },[])
  
   return (
     <>
     <Navbar/>
-     <div  data-scroll data-scroll-section data-scroll-speed="-.7" className='max-w-[100vw] h-[100vh] relative overflow-hidden '>
+     <div   data-scroll data-scroll-section data-scroll-speed="-.7" className='max-w-[100vw] h-[100vh] relative overflow-hidden '>
       <video autoPlay muted loop className=' w-full max-h-[100vh]  object-cover video   '>
         <source  type="video/mp4" src='./KFC-1.mp4'  />
        </video>
@@ -226,13 +211,13 @@ gsap.to(".fanclub",{
     <img className='ml-5 -mt-6' src="https://online.kfc.co.in/static/media/Stripes_Small_OffersIcon.87fc6256.svg" alt="image" />
 
 
-   <Link to="/Menu"> <div className='uppercase mt-1 z-[99999] w-full flex texxtcont overflow-hidden  reddit-mono h-[19vh] text-black font-bold text-[2.5rem] sticky top-[5%] '>{"Browse -Categories".split("").map((item,index)=>{
+   <Link to="/Menu"> <div className='uppercase overflow-hidden mt-1 z-[99999] w-full flex texxtcont  reddit-mono h-[19vh] text-black font-bold text-[2.5rem] sticky top-[5%] '>{"Browse -Categories".split("").map((item,index)=>{
        return <span className='texxt text-[6.5vh] ' key={index}>{item}</span>;
      
      })}</div></Link>
      
       
-      <div className=' block absolute left-1/2 -translate-x-1/2  mt-[25%]  '  >
+      <div className=' block absolute left-1/2 -translate-x-1/2  mt-[25%] '  >
       
       
       {[
@@ -284,8 +269,7 @@ gsap.to(".fanclub",{
     </div>
 })}
 </div>
-  </div> 
-  
+</div>
  
 
 
