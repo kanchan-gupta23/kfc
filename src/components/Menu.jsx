@@ -149,7 +149,7 @@ src:".value"
             <h2 className='font-semibold text-[2.5vh]'>{items.amt}</h2>
             <p className=' text-[2.5vh]'>{items.p}</p>
             <div className=' cart flex mt-3 gap-2 bg-red-600 rounded-xl justify-center px-2 h-[7.5vh] w-[15vw] align-middle  absolute bottom-[5%] left-1/2 -translate-x-1/2'>
-      <button className='capitalize  flex items-center Lato justify-center Lato bg-black py-2'><h5>add to cart</h5></button>
+      <button className='capitalize text-white flex items-center Lato justify-center Lato bg-black my-2'><h5>add to cart</h5></button>
       <img src="https://online.kfc.co.in/static/media/Icon_Add_to_Cart.58b87a9b.svg" className='py-2' alt="cart" />
       </div>
   </div>
@@ -189,7 +189,7 @@ src:".value"
             <h2 className='font-semibold text-[2.5vh]'>{items.amt}</h2>
             <p className='text-[2.5vh]'>{items.p}</p>
               <div className=' cart flex mt-3 gap-2 bg-red-600 rounded-xl justify-center px-2 h-[7.5vh] w-[15vw] align-middle absolute bottom-[5%] left-1/2 -translate-x-1/2'>
-              <button className='capitalize text-white flex items-center justify-center Lato bg-black py-2'><h5 >add to cart</h5></button>
+              <button className='capitalize text-white flex items-center justify-center Lato bg-black my-2'><h5 >add to cart</h5></button>
           <img src="https://online.kfc.co.in/static/media/Icon_Add_to_Cart.58b87a9b.svg" className='py-2' alt="" />
           </div>
       </div>
@@ -232,7 +232,7 @@ src:".value"
     <h2 className='font-semibold text-[2.5vh]'>{items.amt}</h2>
     <p className='text-[2.5vh]'>{items.p}</p>
       <div className=' cart flex mt-3 gap-2 bg-red-600 rounded-xl justify-center h-[7.5vh] w-[15vw] px-2 align-middle absolute bottom-[5%] left-1/2 -translate-x-1/2'>
-      <button className='capitalize text-white flex items-center Lato justify-center Lato bg-black py-2'><h5>add to cart</h5></button>
+      <button className='capitalize text-white flex items-center Lato justify-center Lato bg-black my-2'><h5>add to cart</h5></button>
   <img src="https://online.kfc.co.in/static/media/Icon_Add_to_Cart.58b87a9b.svg" className='py-2' alt="" />
   </div>
 </div>
@@ -283,7 +283,7 @@ src:".value"
     <h2 className='font-semibold text-[2.5vh]'>{items.amt}</h2>
     <p className='text-[2.5vh]'>{items.p}</p>
       <div className=' cart flex mt-3 gap-2 bg-red-600 rounded-xl justify-center px-2 h-[7.5vh] w-[15vw] align-middle absolute bottom-[5%] left-1/2 -translate-x-1/2 '>
-      <button className='capitalize text-white flex items-center Lato justify-center Lato bg-black py-2'><h5>add to cart</h5></button>
+      <button className='capitalize text-white flex items-center Lato justify-center Lato bg-black my-2'><h5>add to cart</h5></button>
   <img src="https://online.kfc.co.in/static/media/Icon_Add_to_Cart.58b87a9b.svg" className='py-2' alt="" />
   </div>
 </div>
@@ -322,7 +322,7 @@ src:".value"
         <p className='text-[2.5vh]'>{items.p}</p>
           <div className=' cart flex mt-3 gap-2 bg-red-600 rounded-xl justify-center px-2 h-[7.5vh] w-[15vw] align-middle absolute bottom-[5%] left-1/2 -translate-x-1/2'>
           <button className='capitalize text-white flex items-center Lato justify-center Lato bg-black py-2'><h5>add to cart</h5></button>
-      <img src="https://online.kfc.co.in/static/media/Icon_Add_to_Cart.58b87a9b.svg" className='py-2' alt="" />
+      <img src="https://online.kfc.co.in/static/media/Icon_Add_to_Cart.58b87a9b.svg" className='my-2' alt="" />
           </div>
       </div>
 })}
@@ -365,7 +365,7 @@ src:".value"
     <h2 className='font-semibold text-[2.5vh]'>{items.amt}</h2>
     <p className='text-[2.5vh]'>{items.p}</p>
       <div className=' cart flex mt-3 gap-2 bg-red-600 rounded-xl justify-center h-[7.5vh] w-[15vw] px-2 align-middle absolute bottom-[5%] left-1/2 -translate-x-1/2'>
-      <button className='capitalize text-white flex items-center Lato justify-center Lato bg-black py-2'><h5>add to cart</h5></button>
+      <button className='capitalize text-white flex items-center Lato justify-center Lato bg-black my-2'><h5>add to cart</h5></button>
   <img src="https://online.kfc.co.in/static/media/Icon_Add_to_Cart.58b87a9b.svg" className='py-2' alt="" />
   </div>
 </div>
@@ -418,7 +418,7 @@ return  <div key={index} className='value-snickers bg-zinc-200 text-black shadow
   <h2 className='font-semibold text-[2.5vh]'>{items.amt}</h2>
   <p className='text-[2.5vh]'>{items.p}</p>
     <div className=' cart flex mt-3 gap-2 bg-red-600 rounded-xl justify-center h-[7.5vh] w-[15vw] px-2 align-middle absolute bottom-[5%] left-1/2 -translate-x-1/2 '>
-    <button className='capitalize text-white flex items-center Lato justify-center Lato bg-black py-2'><h5>add to cart</h5></button>
+    <button className='capitalize text-white flex items-center Lato justify-center Lato bg-black my-2'><h5>add to cart</h5></button>
 <img src="https://online.kfc.co.in/static/media/Icon_Add_to_Cart.58b87a9b.svg" className='py-2' alt="" />
 </div>
 </div>
@@ -458,7 +458,7 @@ return  <div key={index} className='menu3 text-black shadow-xl w-[18vw] h-[60vh]
   <h2 className='font-semibold text-[2.5vh]'>{items.amt}</h2>
   <p className='text-[2.5vh] text-black'>{items.p}</p>
     <div className=' cart flex mt-3 gap-2 bg-red-600 rounded-xl justify-center h-[7.5vh] w-[15vw] px-2 align-middle absolute bottom-[5%] left-1/2 -translate-x-1/2 '>
-    <button className='capitalize text-white flex items-center Lato justify-center Lato bg-black py-2'><h5>add to cart</h5></button>
+    <button className='capitalize text-white flex items-center Lato justify-center Lato bg-black my-2'><h5>add to cart</h5></button>
 <img src="https://online.kfc.co.in/static/media/Icon_Add_to_Cart.58b87a9b.svg" className='py-2' alt="" />
 </div>
 </div>
