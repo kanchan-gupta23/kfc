@@ -1,6 +1,7 @@
 import React, { useEffect,useState } from 'react'
 import {gsap} from 'gsap';
 import { Power2 } from 'gsap';
+import { Power4 } from 'gsap';
 
 import {ScrollTrigger} from "gsap/ScrollTrigger";
 import Footer from './Footer';
@@ -10,6 +11,9 @@ import { FaInstagramSquare } from "react-icons/fa";
 import { FaFacebookSquare } from "react-icons/fa";
 import CountUp from 'react-countup';
 import LocomotiveScroll from 'locomotive-scroll';
+import burger from './burger.gif'
+import bucket from './chicken-bucket.png'
+import box from './box-combo.png'
 function Home() {
   
   const[counter,setCounter]=useState(false)
@@ -189,9 +193,31 @@ gsap.to(".fanclub",{
   },
   
 })
+gsap.to(".slide",{
+  scrollTrigger:{trigger:".mainmenu",
+  scrub:3,
+  start:"top 0%",
+  end:"bottom bottom",
+ 
 
+  },
+  xPercent:-200,
+  ease:Power4
+})
 
-
+gsap.to(".bucket",{
+  y:-30,
+  duration:1,
+  yoyo:true,
+  repeat:-1
+})
+gsap.to(".box",{
+  opacity:0.8,
+  scale:0.8,
+  duration:1,
+  yoyo:true,
+  repeat:-1
+})
 
 
    },[])
@@ -206,7 +232,7 @@ gsap.to(".fanclub",{
     </div> 
 
 
-    <div  className='w-screen  h-[550vh] bg-[url("https://i.pinimg.com/564x/94/10/1c/94101c5113eed3ef38f68341b2decec1.jpg")] bg-contain pt-[4vh]  relative browse-cate  '  >
+    {/* <div  className='w-screen  h-[550vh] bg-[url("https://i.pinimg.com/564x/94/10/1c/94101c5113eed3ef38f68341b2decec1.jpg")] bg-contain pt-[4vh]  relative browse-cate  '  >
      
     <img className='ml-5 -mt-6' src="https://online.kfc.co.in/static/media/Stripes_Small_OffersIcon.87fc6256.svg" alt="image" />
 
@@ -270,8 +296,76 @@ gsap.to(".fanclub",{
 })}
 </div>
 </div>
- 
+  */}
 
+
+<div className='mainmenu w-full text-white Tilt'>
+  <div className='menu-cont w-screen h-[300vh] relative'>
+    <div className='slides w-screen h-screen flex overflow-hidden sticky top-0 left-0'>
+         <div className='slide w-full h-full flex-shrink-0 bg-black    '>
+         <Link to="/Menu"> <div className='uppercase overflow-hidden m-2 w-full flex texxtcont  reddit-mono h-[19vh] text-white font-bold text-[2.5rem]  '>{"Browse -Categories".split("").map((item,index)=>{
+       return <span className='texxt text-[6.5vh] ' key={index}>{item}</span>;
+     
+     })}</div></Link>
+     
+          <div className='w-full h-full flex items-center justify-between relative -top-[10%]'>
+          <div className='w-[50%] flex justify-center' ><img src={burger}  className="w-[40vw] h-[80vh]  " alt="" /></div>
+          <div className='w-[50%] leading-7'>
+          <h1 >Chicken Burger</h1>
+          <p className='pt-3' >$30.00</p>
+          <p className='pt-3'> Lorem Ipsum has been the industry's  standard <br/>dummy text ever since the 1500s,
+             when an unknown printer took a  <br/> galley of type and scrambled it to make a type specimen book. 
+             </p>
+             <button className='w-[15vw] mt-3 bg-white text-black font-extrabold'>Add to cart</button>
+          </div>
+      
+         
+         </div>
+          </div>
+         
+         
+         <div className='slide w-full h-full flex-shrink-0 bg-[url("https://img.freepik.com/free-photo/solid-navy-blue-concrete-textured-wall_53876-124584.jpg?size=626&ext=jpg&ga=GA1.1.1546980028.1719532800&semt=ais_user")]  '>
+         <Link to="/Menu"> <div className='uppercase overflow-hidden m-2 w-full flex texxtcont  reddit-mono h-[19vh] text-white font-bold text-[2.5rem] '>{"Browse -Categories".split("").map((item,index)=>{
+       return <span className='texxt text-[6.5vh] ' key={index}>{item}</span>;
+     
+     })}</div></Link>
+          <div className='w-full h-full relative  flex items-center justify-between -top-[10%]'>
+          <div className='w-[50%] flex justify-center' ><img src={bucket}  className="w-[25vw] h-[50vh] bucket  " alt="" /></div>
+          <div className='w-[50%] leading-7'>
+          <h1 >Chicken Bucket</h1>
+          <p className='pt-3' >$30.00</p>
+          <p className='pt-3'> Lorem Ipsum has been the industry's  standard <br/>dummy text ever since the 1500s,
+             when an unknown printer took a  <br/> galley of type and scrambled it to make a type specimen book. 
+             </p>
+             <button className='w-[15vw] mt-3'>Add to cart</button>
+          </div>
+          </div>
+          
+      
+         
+         </div>
+         <div className='slide w-full h-full flex-shrink-0 bg-[url("https://t3.ftcdn.net/jpg/01/27/95/18/360_F_127951825_t4KwrUxvASGoxmx0VVVHE3anigDafnpP.jpg")]  '>
+         <Link to="/Menu"> <div className='uppercase overflow-hidden m-2  w-full flex texxtcont  reddit-mono h-[19vh] text-white font-bold text-[2.5rem] '>{"Browse -Categories".split("").map((item,index)=>{
+       return <span className='texxt text-[6.5vh] ' key={index}>{item}</span>;
+     
+     })}</div></Link>
+         <div className='w-full h-full relative  flex items-center justify-between -top-[10%] '>
+          <div className='w-[50%] flex justify-center' ><img src={box}  className="w-[45vw] h-[90vh] opacity-1 scale-1 box" alt="" /></div>
+          <div className='w-[50%] leading-7 flex flex-col justify-center'>
+          <h1 >Box Meal</h1>
+          <p className='pt-3' >$30.00</p>
+          <p className='pt-3'> Lorem Ipsum has been the industry's  standard <br/>dummy text ever since the 1500s,
+             when an unknown printer took a  <br/> galley of type and scrambled it to make a type specimen book. 
+             </p>
+             <button className='w-[15vw] mt-3'>Add to cart</button>
+          </div>
+      </div>
+         
+         </div>
+    </div>
+  </div>
+
+</div>
 
   <div className='max-w-screen bg-[url("https://i.pinimg.com/564x/87/93/42/879342fde6d6f9ebd3c65f7c9aa5cb79.jpg")] bg-contain '>
       
@@ -297,7 +391,7 @@ gsap.to(".fanclub",{
 
 
 
-     <div data-scroll data-scroll-section data-scroll-speed="-.6" className='w-screen h-screen   counter-cont bg-[url("https://wallpapers.com/images/high/kfc-fast-food-meal-qvrdx8esu6f1m0w0.webp")] bg-cover'>
+     <div data-scroll data-scroll-section data-scroll-speed="-.6" className='w-screen h-screen   counter-cont bg-[url("https://i.pinimg.com/564x/85/b4/e9/85b4e9264be35ef56fb0583556b01a68.jpg")] bg-cover'>
       <img className='ml-5' src="https://online.kfc.co.in/static/media/Stripes_Small_OffersIcon.87fc6256.svg" alt="image" />
       <h1 className='text-zinc-900 w-screen text-center text-[7vh] Tilt font-bold -mt-[3vh]'>KFC FANDOM</h1>
       <div className='flex'>
@@ -334,7 +428,7 @@ gsap.to(".fanclub",{
         p: "I'm going to have saucy nuggets again on this Sunday. 😍😃😋",
       },
     ].map((item, index) => (
-      <div key={index} className='shadow-lg shadow-red-800 w-[14vw] h-[35vh]  rounded-lg relative bg-zinc-200 fanclub'>
+      <div key={index} className='shadow-lg shadow-red-800 w-[14vw] h-[35vh]  rounded-lg relative bg-[#f0e6d8] fanclub'>
         <img key={index} 
  
        className='absolute w-[80px] h-[80px] rounded-full left-[50%] -translate-x-1/2 -top-[10%] fan-img' src={item.image} alt="User Avatar" />
