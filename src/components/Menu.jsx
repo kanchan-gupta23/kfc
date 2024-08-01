@@ -1,5 +1,3 @@
-
-
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Navbar from './Navbar'; 
@@ -8,6 +6,7 @@ import { Power2 } from "gsap";
 // import "./App.css"
 import Footer from './Footer';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import 'intersection-observer'; 
 const Navbarrr = ({ activeSection }) => (
   <nav>
     {sections.map((section) => (
@@ -21,7 +20,7 @@ const Navbarrr = ({ activeSection }) => (
   </nav>
 );
 
-import {Link } from 'react-router-dom';
+
 const sections = [
  {id:"Periperichicken",label:"Peri peri chicken"},
  {id:" value",label:" VALUE SNACKERS"},
